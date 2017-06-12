@@ -1,4 +1,4 @@
-// Crystal variables
+// Crystal variables...make object so you don't need to create a lot of seperate variables. Also helps a ton with attributing the random 1-12 value to the crystals
 var crystal = {
 	diamond:
 	{
@@ -29,11 +29,9 @@ var targetScore = 0
 var winCount = 0
 var lossCount = 0
 
+// make a get random variable so you don't have to keep creating a 'Math.random' function
 var getRandom = function(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
-
-
-
 }
 
 var startGame = function() {
@@ -52,14 +50,6 @@ var startGame = function() {
    crystal.sapphire.value = getRandom(1, 12);
 
 
-   console.log("------------------------------------");
-   console.log("Target Score: " + targetScore);
-   console.log("Diamond: " + crystal.diamond.value);
-   console.log("Emerald: " + crystal.emerald.value);
-   console.log("Ruby: " + crystal.ruby.value);
-   console.log("Sapphire: " + crystal.sapphire.value);
-   console.log("------------------------------------");
-   // change HTML
 }
 
 var addValues = function(crystal) {
@@ -68,13 +58,9 @@ var addValues = function(crystal) {
 	$('.score').html(currentScore);
     
     checkWin();
-
-	console.log("Score: " + currentScore)
-
-
-
 }
 
+// Checking wins and losses
 var checkWin = function() {
     if (currentScore > targetScore) {
     	alert("You lost!")
@@ -94,7 +80,7 @@ var checkWin = function() {
 startGame();  
 
 
-
+// Event (click) keys
 $('#diamond').on("click", function(){
 	addValues(crystal.diamond);
 	
@@ -114,6 +100,13 @@ $('#sapphire').on("click", function(){
 	addValues(crystal.sapphire);
 	
 });
+
+
+ 
+
+
+	
+
 
 
  
