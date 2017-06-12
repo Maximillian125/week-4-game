@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crystal Game</title>
+	<!-- <link rel="stylesheet" type="text/css" href="assets/CSS/reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+  <div class='container'>
+    <h1 id='Header'>Crystals Collector!</h1>
+
+      <div class='main-content'>
+        <p>
+          You will be given a random number at the start of the game.
+          <br>
+          There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. 
+          <br>
+          You win the game by matching your total score to random number, you lose the game if your total score goes above the random number
+          <br>
+          The value of each crystal is hidden from you until you click on it.
+          <br>
+          Each time when the game starts, the game will change the value of each crystal.
+        </p>
+
+        <div class="panel panel-default">
+		  <div id='randomNum'>
+		    0
+		  </div>
+		</div>
+
+        <div class="btn-group" role="group" aria-label="...">
+          <img id="diamond" src="assets/images/diamond-cz.jpg">
+          <img id="emerald" src="assets/images/reset.png">
+          <img id="ruby" src="assets/images/ruby_PNG4.png">
+          <img id="sapphire" src="assets/images/sapphire_PNG23.png">
+          
+        </div>
+
+        <h2>Wins:</h2><span id='wins'></span>
+        <h2>Losses:</h2><span id='losses'></span>
+        <h2>Total Score:</h2>
+
+		<div class="panel panel-default">
+		  <div class="score">
+		    0
+		  </div>
+		</div>
+
+
+
+
+
+
+</body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<script type='text/javascript' src='assets/javascript/game.js'></script>
+</html> 
